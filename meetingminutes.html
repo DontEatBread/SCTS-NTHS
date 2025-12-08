@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NTHS • Meeting Minutes</title>
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --panel: rgba(255,255,255,0.04);
+      --muted: #9aa2b2;
+      --accent: linear-gradient(90deg,#7a6bff 0%,#5bb1ff 100%);
+      --glass-border: rgba(255,255,255,0.06);
+      --radius:14px;
+      --max-width:900px;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#edf2ff;
+      font-family:Inter, sans-serif;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    header.site-header{
+      position:sticky;top:0;z-index:60;
+      background:linear-gradient(180deg, rgba(11,13,18,0.75), rgba(11,13,18,0.55));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:48px}
+    .brand h1{font-size:18px;margin:0}
+
+    nav.primary{display:flex;gap:16px;align-items:center}
+    nav.primary a{padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;font-size:15px}
+    nav.primary a:hover{color:#fff}
+    .cta{background:var(--accent);padding:8px 14px;border-radius:10px;color:#021024;font-weight:700}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:40px 24px}
+
+    h2{font-size:34px;margin:0 0 24px}
+
+    /* ---- FORUM LIST STYLE ---- */
+    .forum-list{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .forum-item{
+      background:var(--panel);
+      border:1px solid var(--glass-border);
+      padding:22px 24px;
+      border-radius:var(--radius);
+      transition:transform .25s ease, border .25s ease, box-shadow .25s ease;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      cursor:pointer;
+    }
+    .forum-item:hover{
+      transform:translateY(-6px);
+      border-color:rgba(255,255,255,0.15);
+      box-shadow:0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    .forum-title{
+      font-size:20px;
+      font-weight:600;
+    }
+
+    .forum-meta{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:4px;
+    }
+
+    footer.site-foot{
+      padding:28px 0;margin-top:40px;color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.03);
+      background:var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="https://nths.org/wp-content/uploads/2019/02/NTHS-logo_Vertical_RGB_transparent_300dpi-01.png">
+      <div>
+        <h1>SCTC • NTHS</h1>
+        <div class="muted" style="font-size:13px">National Technical Honor Society — Chapter</div>
+      </div>
+    </div>
+
+    <nav class="primary">
+      <a href="index.html">Home</a>
+      <a href="leadership.html">Officers/leadership</a>
+      <a href="minutes.html">Meeting Minutes</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://band.us/band/100810437" target="_blank">BandApp</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h2>Meeting Minutes</h2>
+  <p class="muted" style="margin-bottom:26px">Click a meeting to view its minutes.</p>
+  
+	<!--Meeting Minutes List-->
+
+  <div class="forum-list">
+
+    <a class="forum-item" href="https://docs.google.com/document/d/1OnsYpMMa69iD34fhsrytoA75WNqZTKaZUO_lEdh_5fc/edit?usp=sharing" target="_blank">
+      <div>
+        <div class="forum-title">Meeting — December 2025</div>
+        <div class="forum-meta">Uploaded Dec 03, 2025 • Secretary: Braeden</div>
+      </div>
+      ➜
+    </a>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap">
+    <div>© <span id="year"></span> NTHS Chapter</div>
+    <div class="muted">Built with ♥</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
